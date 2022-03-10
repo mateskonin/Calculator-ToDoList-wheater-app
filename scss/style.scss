@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-around;
+    background-color: black;
+
+}
+
+// CALCULATOR
+
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    // height: 100%;
+    width: 100%;
+    min-width: 320px;
+    max-width: 420px;
+    background-color: black;
+    box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+
+
+    .container {
+        width: 100%;
+        max-width: 420px;
+        min-width: 320px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        background-image: linear-gradient(purple, gold);
+
+        .display {
+            margin: 5px;
+            padding: 16px 8px;
+            height: 100px;
+            line-height: 75px;
+            font-size: 50px;
+            text-align: right;
+            background-color: rgba(white, 0.4);
+            border: solid 2px black;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .button {
+            margin: 5px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 35px;
+            background-color: rgba(white, 0.4);
+            border-radius: 10px;
+            border: 1px solid #999;
+            cursor: pointer;
+        }
+
+        .result {
+            background-color: rgb(85, 85, 255);
+            color: white;
+        }
+
+        .button:hover {
+            background-color: #323330;
+            color: white;
+            transition: 0.5s ease-in-out;
+        }
+    }
+}
+
+// WHEATER APP
+
+.wheater-app {
+    margin: 20px 0;
+    width: 100%;
+    min-width: 320px;
+    max-width: 420px;
+    background-image: linear-gradient(purple, gold);
+    box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+    padding: 5px;
+
+    .top {
+        height: 260px;
+
+        .title {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .main-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+        }
+
+        .city-name {
+            font-size: 40px;
+        }
+
+        .input {
+            font-size: 16px;
+            padding: 5px 10px;
+            margin-top: 10px;
+            background: none;
+            border: none;
+            color: black;
+            background-color: rgba($color: white, $alpha: 0.5);
+            border-radius: 5px;
+
+        }
+
+        .input::placeholder {
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .button-wheater {
+            padding: 10px;
+            margin-top: 10px;
+            // margin: 30px auto 0;
+            // margin-left: 20px;
+            color: #fff;
+            background-color: rgb(85, 85, 255);
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color .3s, color .3s;
+        }
+
+        .button-wheater:hover {
+            background-color: black;
+        }
+
+        .photo {
+            width: 140px;
+            height: 140px;
+            object-fit: contain;
+        }
+
+        .warning {
+            margin-top: 10px;
+            font-size: 14px;
+            color: white;
+        }
+    }
+
+    .bottom {
+        height: 140px;
+
+        .headings,
+        .weather-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .headings p,
+        .weather-info p {
+            width: 33.3%;
+            text-align: center;
+        }
+
+        .headings {
+            height: 35%;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .weather-info {
+            height: 65%;
+            font-size: 26px;
+        }
+    }
+
+}
+
+// TO DO LISTA
+.todo-lista {
+    width: 100%;
+    margin: 20px 0;
+    min-width: 320px;
+    max-width: 420px;
+    box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+    background-image: linear-gradient(purple, gold);
+
+    .todo {
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+        text-align: center;
+
+        h1 {
+            color: black;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .fas {
+            pointer-events: none;
+        }
+
+        .header {
+            border-radius: 5px 5px 0 0;
+            padding: 40px;
+            background-image: linear-gradient(purple, gold);
+        }
+
+        .todo-input {
+            width: 80%;
+            padding: 10px 20px;
+            margin-right: 20px;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            background-color: rgba($color: white, $alpha: 0.5);
+        }
+
+        .error-info {
+            margin-top: 20px;
+            color: black;
+        }
+
+        .btn-add {
+            margin: 10px;
+            padding: 10px 22px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: rgb(85, 85, 255);
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color .3s, background-color .3s;
+        }
+
+        .btn-add:hover {
+            color: #fff;
+            background-color: black;
+        }
+
+        .todolist {
+            padding: 20px 0;
+            background-color: rgba($color: white, $alpha: 0.5);
+
+        }
+
+        .todolist h3 {
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .todolist li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px;
+            padding-left: 20px;
+            text-align: left;
+            list-style: none;
+            background-color: var(--light);
+        }
+
+        .tools {
+            display: inline-block;
+        }
+
+        .tools button {
+            padding: 15px 10px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color .3s;
+        }
+
+        .tools button:hover {
+            background-color: #ddd;
+        }
+
+        .complete {
+            color: royalblue;
+        }
+
+        .edit {
+            font-weight: bold;
+            color: rgb(15, 179, 69);
+        }
+
+        .delete {
+            color: tomato;
+        }
+
+        .completed {
+            font-size: 13px;
+            text-decoration: line-through;
+            font-style: italic;
+
+        }
+    }
+
+    .popup {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 5px;
+
+        h3 {
+            padding: 20px;
+        }
+
+        .popup-info {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .popup-body {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 90%;
+            padding: 10px;
+        }
+
+        .popup-input {
+            width: 100%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            background-color: rgba($color: white, $alpha: 0.5);
+        }
+
+        .popup-btn {
+            width: 30%;
+            display: inline-block;
+            padding: 10px;
+            margin: 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(85, 85, 255);
+
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color .3s, background-color .3s;
+        }
+
+        .popup-btn:hover {
+            color: #fff;
+            background-color: black;
+        }
+    }
+
+}
+
+
+@media(max-width: 576px) {
+    .calculator {
+        .container {
+            .button {
+                height: 75px;
+                line-height: 75px;
+            }
+        }
+    }
+}
